@@ -1,0 +1,164 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  padding: 1.5em;
+}
+
+h1 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+h1>a {
+  color: #212529;
+  text-decoration: none;
+}
+
+a {
+  color: #7a7a7a;
+}
+
+a:hover {
+  color: #212529;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  /* remove padding from list radio buttons. */
+}
+
+ul.nav {
+  margin: 0;
+}
+
+ul.nav>li {
+  display: inline;
+}
+
+ul.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px -10px;
+}
+
+ul.photo-gallery-center {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px -10px;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.photo-gallery->li {
+  height: 40vh;
+  flex-grow: 1;
+  margin: 10px 10px;
+}
+
+ul.photo-gallery-center>li {
+  height: 40vh;
+  flex-shrink: 1;
+  margin: 10px 10px;
+}
+
+/* Last row stretchiness */
+
+li:last-child {
+  flex-shrink: 1;
+}
+
+img {
+  max-height: 100%;
+  min-height: 100%;
+  object-fit: scale-down;
+  vertical-align: bottom;
+}
+
+img.about {
+  min-width: 400px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+p.caption {
+  font-size: 0.75em;
+  font-style: italic;
+  font-weight: 200;
+  margin-top: 5px;
+}
+
+.header-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* https://css-tricks.com/adaptive-photo-layout-with-flexbox/ */
+
+/* Short Screens
+
+To help with small devices in landscape, increasing the height of photos helps to see them as large as possible: 
+
+*/
+
+@media (max-aspect-ratio: 1/1) {
+  li {
+    height: 30vh;
+  }
+}
+
+/* Portrait
+
+If your viewport is taller than it is wide, this approach limits the amount of photos per line thus messing up their aspect ratios. 
+To solve this, you can make the photo rows less tall with this simple media query: 
+
+*/
+
+@media (max-height: 480px) {
+  li {
+    height: 80vh;
+  }
+}
+
+/*
+Smaller Screens + Portrait
+
+Most phones aren’t wide enough to allow flexbox to properly do its job without miniaturizing the photos, 
+so here I opted to not try to fit multiple photos per line. Still, it’s worth setting a maximum height 
+here so you’ll at least have a hint at the next photo in the list.
+
+*/
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  ul {
+    flex-direction: row;
+  }
+  li {
+    height: auto;
+  }
+  img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background-color: #212529;
+  }
+  h1>a {
+    color: #fff;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #fff;
+  }
+}
