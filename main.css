@@ -56,7 +56,7 @@ ul.photo-gallery-center {
   justify-content: center;
 }
 
-ul.photo-gallery->li {
+ul.photo-gallery>li {
   height: 40vh;
   flex-grow: 1;
   margin: 10px 10px;
