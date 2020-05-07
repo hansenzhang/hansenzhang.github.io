@@ -47,13 +47,13 @@ header nav > ul > li {
 ul.photo-gallery {
   display: flex;
   flex-wrap: wrap;
-  margin: -10px -10px;
+  margin: -16px -16px;
 }
 
 ul.photo-gallery-center {
   display: flex;
   flex-wrap: wrap;
-  margin: -10px -10px;
+  margin: -16px -16px;
   align-items: center;
   justify-content: center;
 }
@@ -61,13 +61,13 @@ ul.photo-gallery-center {
 ul.photo-gallery>li {
   height: 35vh;
   flex-shrink: 1;
-  margin: 10px 10px;
+  margin: 16px 16px;
 }
 
 ul.photo-gallery-center>li {
   height: 35vh;
   flex-shrink: 1;
-  margin: 10px 10px;
+  margin: 16px 16px;
 }
 
 /* Last row stretchiness */
