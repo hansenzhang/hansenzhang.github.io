@@ -34,13 +34,15 @@ ul {
   /* remove padding from list radio buttons. */
 }
 
-ul.nav {
+header nav > ul {
   margin: 0;
 }
 
-ul.nav>li {
+header nav > ul > li {
   display: inline;
+  padding-right: 0.5em;
 }
+
 
 ul.photo-gallery {
   display: flex;
@@ -57,13 +59,13 @@ ul.photo-gallery-center {
 }
 
 ul.photo-gallery>li {
-  height: 40vh;
-  flex-grow: 1;
+  height: 35vh;
+  flex-shrink: 1;
   margin: 10px 10px;
 }
 
 ul.photo-gallery-center>li {
-  height: 40vh;
+  height: 35vh;
   flex-shrink: 1;
   margin: 10px 10px;
 }
