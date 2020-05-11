@@ -141,8 +141,14 @@ img {
     -moz-column-width: 50%;
     column-width: 50%;
   }
+  body {
+    padding: 1em 2em;
+  }
 }
 @media only screen and (max-width: 479px) {
+  body {
+    padding: 1em 1em;
+  }
   .columns {
     -moz-column-count: 1;
     column-count: 1;
