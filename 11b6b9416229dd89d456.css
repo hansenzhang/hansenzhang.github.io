@@ -6,7 +6,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
-  padding: 1em 3em;
+  padding: 8px 48px;
 }
 
 h1 {
@@ -106,7 +106,7 @@ p.caption {
 }
 
 footer {
-  padding-top: 2em;
+  padding-top: 32px;
 }
 
 footer p {
@@ -142,12 +142,12 @@ img {
     column-width: 50%;
   }
   body {
-    padding: 1em 2em;
+    padding: 8px 32px;
   }
 }
 @media only screen and (max-width: 479px) {
   body {
-    padding: 1em 1em;
+    padding: 8px 8px;
   }
   .columns {
     -moz-column-count: 1;
